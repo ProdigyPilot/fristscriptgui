@@ -1,2 +1,199 @@
 wait('0.2')
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ProdigyPilot/ProdigyStyleHub/main/lib.lua"))()
+-- Prodigy Style Hub Script for Roblox Exploit
+
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/yourusername/prodigystylehub/main/lib.lua"))()
+
+local ProdigyHub = Library:New({
+  Name = "Prodigy Style Hub",
+  SizeX = 600,
+  SizeY = 500
+})
+
+local MainTab = ProdigyHub:NewTab({
+  Name = "Main"
+})
+
+local AutoFarmTab = ProdigyHub:NewTab({
+  Name = "Auto Farm"
+})
+
+local SettingsTab = ProdigyHub:NewTab({
+  Name = "Settings"
+})
+
+-- Main Tab
+local LoadingScreen = MainTab:NewSection({
+  Name = "Loading Screen"
+})
+
+local KeySystem = MainTab:NewSection({
+  Name = "Key System"
+})
+
+-- Auto Farm Tab
+local PlayerName = AutoFarmTab:NewSection({
+  Name = "Player Name"
+})
+
+local AutoStats = AutoFarmTab:NewSection({
+  Name = "Auto Stats"
+})
+
+-- Settings Tab
+local CloseButton = SettingsTab:NewSection({
+  Name = "Close Button"
+})
+
+-- Main Tab Elements
+LoadingScreen:NewToggle({
+  Name = "Enable Loading Screen",
+  Default = false,
+  Callback = function(bool)
+    if bool then
+      -- Load Loading Screen
+    else
+      -- Unload Loading Screen
+    end
+  end
+})
+
+KeySystem:NewTextBox({
+  Name = "Key",
+  PlaceholderText = "Enter Key Here",
+  Callback = function(text)
+    if text == "correctkey" then
+      -- Grant Access
+    else
+      game.Players.LocalPlayer:Kick("WRONG KEY TRY AGAIN")
+    end
+  end
+})
+
+KeySystem:NewButton({
+  Name = "Submit Key",
+  Callback = function()
+    -- Get Key Text Box Value and Check
+  end
+})
+
+-- Auto Farm Tab Elements
+PlayerName:NewTextBox({
+  Name = "Player Name",
+  PlaceholderText = "Enter Player Name Here",
+  Callback = function(text)
+    -- Update Player Name
+  end
+})
+
+-- Auto Farm Functions
+local function AutoFarmBloxFruit()
+  -- Implement auto farm logic for Blox Fruit
+  while true do
+    -- Auto farm code for Blox Fruit
+    wait(1) -- Wait 1 second before the next iteration
+  end
+end
+
+local function AutoFarmGun()
+  -- Implement auto farm logic for Gun
+  while true do
+    -- Auto farm code for Gun
+    wait(1) -- Wait 1 second before the next iteration
+  end
+end
+
+local function AutoFarmDefense()
+  -- Implement auto farm logic for Defense
+  while true do
+    -- Auto farm code for Defense
+    wait(1) -- Wait 1 second before the next iteration
+  end
+end
+
+local function AutoFarmMelee()
+  -- Implement auto farm logic for Melee
+  while true do
+    -- Auto farm code for Melee
+    wait(1) -- Wait 1 second before the next iteration
+  end
+end
+
+local function AutoFarmSword()
+  -- Implement auto farm logic for Sword
+  while true do
+    -- Auto farm code for Sword
+    wait(1) -- Wait 1 second before the next iteration
+  end
+end
+
+-- Toggle Callbacks for Auto Stats
+AutoStats:NewToggle({
+  Name = "Blox Fruit",
+  Default = false,
+  Callback = function(bool)
+    if bool then
+      task.spawn(AutoFarmBloxFruit)
+    else
+      -- Stop Auto Farming Blox Fruit
+    end
+  end
+})
+
+AutoStats:NewToggle({
+  Name = "Gun",
+  Default = false,
+  Callback = function(bool)
+    if bool then
+      task.spawn(AutoFarmGun)
+    else
+      -- Stop Auto Farming Gun
+    end
+  end
+})
+
+AutoStats:NewToggle({
+  Name = "Defense",
+  Default = false,
+  Callback = function(bool)
+    if bool then
+      task.spawn(AutoFarmDefense)
+    else
+      -- Stop Auto Farming Defense
+    end
+  end
+})
+
+AutoStats:NewToggle({
+  Name = "Melee",
+  Default = false,
+  Callback = function(bool)
+    if bool then
+      task.spawn(AutoFarmMelee)
+    else
+      -- Stop Auto Farming Melee
+    end
+  end
+})
+
+AutoStats:NewToggle({
+  Name = "Sword",
+  Default = false,
+  Callback = function(bool)
+    if bool then
+      task.spawn(AutoFarmSword)
+    else
+      -- Stop Auto Farming Sword
+    end
+  end
+})
+
+-- Settings Tab Elements
+CloseButton:NewButton({
+  Name = "Close",
+  Callback = function()
+    Library:Unload()
+  end
+})
+
+Library:Load()
+
