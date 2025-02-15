@@ -1,2 +1,2 @@
 wait('0.2')
-loadstring(game:HttpGet("https://raw.githubusercontent.com/ProdigyPilot/prodigystylehub/main/lib.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/ProdigyPilot/ProdigyStyleHub/main/lib.lua"))()
